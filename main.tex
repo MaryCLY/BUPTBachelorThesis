@@ -43,264 +43,211 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Main Area %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{基础模块示例}
+\chapter{绪论}
 
-\section{特殊文本类型}
-\subsection{脚注}
-% 如果你的项目来源于科研项目，可以使用以下指令插入无编号脚注于正文第一页
-\blfootnote{本项目来源于科研项目“基于\LaTeX{}的本科毕业设计”，项目编号1124}
-社交媒体是一种供用户创建在线社群来分享信息、观点、个人信息和其它内容（如视频）的电子化交流平台，社交网络服务（social network service, SNS）和微博客（microblogging）都属于社交媒体的范畴\cite{webster_social_media}，国外较为知名的有Facebook\footnote{http://www.facebook.com/}、Instagram\footnote{https://www.instagram.com/}、Twitter\footnote{http://www.twitter.com/}、LinkedIn\footnote{http://www.linkedin.com/}等，国内较为知名的有新浪微博\footnote{http://www.weibo.com/}。
+\section{研究背景及意义}
+高考志愿填报一直以来是所有高中学生及家长的重要挑战。在经历了高考的苦战过后，许多学生和家长可能忽视或是没有能力去获取足够的信息来完成一个合适的志愿选择。尤其是来自经济和教育水平不高的地区的学生，更可能因为信息不对称而在志愿填报上面吃亏，没有进入一个整体情况适合自己且符合自己分数的学校，或者不能够选择一个适合自己的专业。想要顺利地填报志愿，需要获取充沛的信息和进行恰当的分析，而一个好的平台能够集中这些资源，从而帮助许多需要的学生找到自己梦想的起跳板。
 
-在社交媒体的强覆盖下，新闻信息的传播渠道也悄然了发生变化。\cite{false_news_spread_2018}
+目前我国各高考地区采用的志愿填报方式仍处于新旧模式并存的状态，其中对于填报的时间分为“考前填报”（旧式，在部分地区依然沿用）和“知分填报”（新式，大多数地区采用），而志愿录取模式则分为“顺序志愿”（旧式）和“平行志愿”（新式）。目前来说，大部分地区都采取了知分填报和平行志愿的模式，因此本设计可能会更偏向于这些模式，但其中的主要功能（根据分数来考虑学校的录取可能性以及各类信息检索等）依然是对这几种模式下的志愿填报都有所助益的。直至今年，部分地区依然使用文理分科法，而部分地区已经采取"3+3"或"3+1+2"等新高考的模式。\cite{我国高考志愿填报机制的演变与优化}如何做到对于新高考改革的适应也是在开发高考志愿填报辅助系统的过程中一项十分重要的工作。
 
-\subsection{定义、定理与引理等}
-\begin{definition}
-这是一条我也不知道在说什么的定义，反正我就是写在这里做个样子罢了，也没人会仔细读。\cite{周兴2017基于深度学习的谣言检测及模式挖掘}
-\end{definition}
+因此，开发一个能够充分照顾学生的需求、推荐算法合理、信息全面而准确、精简无累赘而又易于使用的高招志愿填报辅助系统是一件非常有意义的事情。本毕业设计将集中完成这样的一个目标，建设一个能够为广大考生和家长分忧的设施。
 
-\begin{theorem}
-这是一条我也不知道在说什么的定理，反正我就是写在这里做个样子罢了，也没人会仔细读。
-\end{theorem}
+\section{国内外有关本选题研究的动态}
+国外的大学升学模式与国内普遍存在明显差别，一般采用单独向学校申请的方式，录取的影响因素也较多。而我国高考升学的志愿填报方式较为简单，以分数为唯一参照，因此本毕业设计的研究过程也主要考察国内的高考志愿填报方式，以及国内的相关产品及研究。
 
-\begin{axiom}
-这是一条我也不知道在说什么的公理，反正我就是写在这里做个样子罢了，也没人会仔细读。
-\end{axiom}
+在市面上已经出现一些指导高考志愿填报的系统，如教育部的官方平台“阳光高考”、“掌上高考”、“完美志愿”等。但它们中许多设计不够完善，没有办法根据学生的成绩以及不同学生的需求（专业偏向、城市偏向、学校类型或规模偏向）来指导学生进行填报志愿的选择；有一些系统的推荐算法只根据往年分数，而不考虑试题的难度，容易造成较大的误差；有一些系统的信息获取不够全面，挖掘得不够深入，可能无法提供准确的分析；有一些商业化系统则过于重视营收，没有做好帮助学生选择学校和专业的本职，而是把重心放在了没有必要的内容上；还有一些由于技术有限等原因，客户端界面不够人性化、不易于使用。
 
-\begin{lemma}
-这是一条我也不知道在说什么的引理，反正我就是写在这里做个样子罢了，也没人会仔细读。
-\end{lemma}
-
-\begin{proposition}
-这是一条我也不知道在说什么的命题，反正我就是写在这里做个样子罢了，也没人会仔细读。
-\end{proposition}
-
-\begin{corollary}
-这是一条我也不知道在说什么的推论，反正我就是写在这里做个样子罢了，也没人会仔细读。
-\end{corollary}
-
-\subsection{中英文文献、学位论文引用}
-根据美国皮尤研究中心的2017年9月发布的调查结果\cite{pew_news_use_2017}，67\%的美国民众会从社交媒体上获取新闻信息，其中高使用频率用户占20\%。在国内，中国互联网信息中心《2016年中国互联网新闻市场研究报告》\cite{internet_news_2016}也显示，社交媒体已逐渐成为新闻获取、评论、转发、跳转的重要渠道，在2016年下半年，曾经通过社交媒体获取过新闻资讯的用户比例高达90.7\%，在微信、微博等社交媒体参与新闻评论的比例分别为62.8\%和50.2\%。社交媒体正在成为网络上热门事件生成并发酵的源头，在形成传播影响力后带动传统媒体跟进报道，最终形成更大规模的舆论浪潮。\cite{Yang2012Automatic}
-
-在国内，新浪微博由于其发布方便、传播迅速、受众广泛且总量大的特点，成为了虚假信息传播的重灾区：《中国新媒体发展报告（2013）》\cite{唐绪军2013中国新媒体发展报告}显示，2012年的100件微博热点舆情案例中，有超过1/3出现谣言；《中国新媒体发展报告（2015）》\cite{唐绪军2015中国新媒体发展报告}对2014年传播较广、比较典型的92条假新闻进行了多维度分析，发现有59\%的虚假新闻首发于新浪微博。
-
-此等信息的传播严重损害了有关公众人物的名誉权，降低了社交媒体服务商的商业美誉度，扰乱了网络空间秩序，冲击着网民的认知，极易对民众造成误导，带来诸多麻烦和经济损失，甚至会导致社会秩序的混乱。针对社交媒体谣言采取行动成为了有关部门、服务提供商和广大民众的共同选择。\cite{周兴2017基于深度学习的谣言检测及模式挖掘}
-
-\section{图表及其引用}
-此处引用了简单的表\ref{crowdwisdom_TMP}。
-
-请注意，\LaTeX{}的图表排版规则决定了图表\textbf{不一定会乖乖呆在你插入的地方}，这是为了避免Word中由于图片尺寸不匹配在页面下部出现的的空白，所以请不要使用“下图”“下表”作为指向文字，应使用“图1-1所示”这样的表述。
-
-\begin{bupttable}{基于浏览者行为的特征}{crowdwisdom_TMP}
-
-    \begin{tabular}{l|l|l}
-		\hline \textbf{特征} & \textbf{描述} & \textbf{形式与理论范围}\\
-		\hline 点赞量 & 微博的点赞数量 & 数值，$\mathbb{N}$ \\
-		\hline 评论量 & 微博的评论数量 & 数值，$\mathbb{N}$ \\
-		\hline 转发量 & 微博的转发数量 & 数值，$\mathbb{N}$ \\
-		\hline
-    \end{tabular}
-\end{bupttable}
-
-此处引用了复杂的表\ref{complexcrowdwisdom_TMP}。
+在本毕业设计的研究过程中，对这些相关产品的相关功能进行了分析，在确定本毕业设计的功能的过程中有一定的参考，并力图规避它们的不足之处。
 
 
-\begin{bupttable}{基于浏览者行为的复杂特征}{complexcrowdwisdom_TMP}
-    \begin{tabular}{l|l|l|l}
-        \hline
-        \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{类别}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{特征}}} & \multicolumn{2}{c}{\textbf{不知道叫什么的表头}} \\
-        \cline{3-4}
-        & & \multicolumn{1}{c|}{\textbf{描述}} & \multicolumn{1}{c}{\textbf{形式与理论范围}} \\
-        \hline
-        \multirow{3}{*}{正常互动} & 点赞量 & 微博的点赞数量 & 数值，$\mathbb{N}$ \\
-        \cline{2-4}
-        & 评论量 & 微博的评论数量 & 数值，$\mathbb{N}$ \\
-        \cline{2-4}
-        & 转发量 & 微博的转发数量 & 数值，$\mathbb{N}$ \\
-        \hline
-        非正常互动 & 羡慕量 & 微博的羡慕数量 & 数值，$\mathbb{N}$ \\
-        \hline
-    \end{tabular}
-\end{bupttable}
+\section{论文的结构}
 
-此处展示了更专业的表\ref{tab:abbr_table}，一个好的表格没有竖线。
-% 请注意1）tabularx环境对多行文本的处理；2）booktabs宏包中支持的更粗的顶端和底端表格边界线，边界线与文本间更大的间距。
-\begin{bupttable}{红警2名词解释}{tab:abbr_table}
-    \begin{tabularx}{\textwidth}{llX}
-        \toprule
-        \textbf{术语类别} & \textbf{缩略语} & \textbf{解释} \\ \midrule
-        & 兵营 & 兵营（Barracks），《命令与征服\ 红色警戒2：尤里的复仇》游戏中的一种生产建筑，用以生产步兵单位 \\ \cmidrule(l){2-3}
-        & 建造场 & 建造场（Construction Yard），《命令与征服\ 红色警戒2：尤里的复仇》游戏中的一种基础建筑，用以支持其他建筑的建造 \\ \cmidrule(l){2-3}
-        & 矿厂 & 矿石精炼厂（Ore Refinery），《命令与征服\ 红色警戒2：尤里的复仇》游戏中的一种资源建筑，用以将矿车采集的矿石转化为游戏资金 \\ \cmidrule(l){2-3}
-        游戏 & 空指 & 空指部（Airforce Command Headquarters），《命令与征服\ 红色警戒2：尤里的复仇》游戏中的一种资源建筑，用以提供雷达功能和T2科技及生产部分空军单位 \\ \cmidrule(l){2-3}
-        & 相机 & 游戏术语，特指游戏内的观察区域和视角 \\ \cmidrule(l){2-3}
-        & 重工 & 战车工厂（War Factory），《命令与征服\ 红色警戒2：尤里的复仇》游戏中的一种生产建筑，用以生产载具单位 \\ \cmidrule(l){2-3}
-        & 战争迷雾 & 游戏术语，《命令与征服\ 红色警戒2：尤里的复仇》中指黑色的未探索区域 \\ \bottomrule
-    \end{tabularx}
-\end{bupttable}
 
-此处引用了一张图。图\ref{autoencoder_TMP}表示的是一个由含有4个神经元的输入层、含有3个神经元的隐藏层和含有4个神经元的输出层组成的自编码器，$+1$代表偏置项。
 
-%图片宽度设置为文本宽度的75%，可以调整为合适的比例
-\buptfigure[width=0.7\textwidth]{pictures/autoencoder}{自编码器结构}{autoencoder_TMP}
 
-%组图示例，已按照指导手册要求设计，由于子图数量不同，无法压缩成\buptfigure那样，大家对照示例即可
-\begin{figure}[!htbp]
-    \centering
-    \subfloat[]{ %[]对齐方式，t为top，b为bottom，留空即可
-	\label{Fig:R1} % 子图1标签名
-    	\includegraphics[width=0.45\textwidth]{pictures/autoencoder} %插入图片命令，格式为[配置]{图片路径}
-    }
-    \quad %空格
-    \subfloat[]{
-	\label{Fig:R2} % 子图2标签名
-    	\includegraphics[width=0.45\textwidth]{pictures/autoencoder}
-    }
-    \caption{这是两个自编码器结构，我就是排一下子图的效果：\protect\subref{Fig:R1}左边的自编码器，\protect\subref{Fig:R2}右边的自编码器} %注意须使用\protect\subref{}进行标号引用
-    \label{Fig:RecAccuracy} % 整个组图的标签名
-\end{figure}
+\chapter{相关开发技术}
 
-\section{公式与算法表示}
+\section{Python 网络爬虫}
+在本毕业设计的开发过程中，需要使用大量的真实高考录取数据和院校资料来进行功能的试验以及页面内容的填充，因此在本毕业设计中主要使用 Python 网络爬虫这一高效率的方式获取数据。
 
-\subsection{例子：基于主成分分析}
+\subsection{Python 语言}
+Python 是一种广泛使用的解释型、高级和通用的编程语言。Python 支持多种编程范型，包括函数式、指令式、反射式、结构化和面向对象编程。它拥有动态类型系统和垃圾回收功能，能够自动管理内存使用，并且其本身拥有一个巨大而广泛的标准库。\cite{python_wikipedia}\cite{python_about}
 
-\subsubsection{主成分分析算法}
+在本毕业设计中大量使用 Python 语言来进行一些爬虫及数据处理脚本的编写，其优势在于学习成本较低，并且拥有易于使用、安全规范的外部包管理系统和活跃的社区生态。活跃的社区生态使得许多公开发布的有用功能可以直接被应用到程序中，开发者无需闭门造车，对于较大规模程序的开发，使用 Python 语言引入相关库能达到事半功倍的效果。
 
-下面对主成分分析进行介绍。
+目前仍在广泛使用的 Python 语言版本分别为 Python 2 和 Python 3, 本毕业设计中均使用 Python 3 环境进行开发。
 
-主成分分析是一种简单的机器学习算法，其功能可以从两方面解释：一方面可以认为它提供了一种压缩数据的方式，另一方面也可以认为它是一种学习数据表示的无监督学习算法。\cite{Goodfellow2016DeepLearning}
-通过PCA，我们可以得到一个恰当的超平面及一个投影矩阵，通过投影矩阵，样本点将被投影在这一超平面上，且满足最大可分性（投影后样本点的方差最大化），直观上讲，也就是能尽可能分开。
+\subsection{网络爬虫}
+网络爬虫是一种互联网机器人，它通过特定的模式在互联网上进行索引，浏览海量的网页，并从 HTML（超文本标记语言，HyperText Markup Language）代码中提取信息进行下载。\cite{web_crawler}
 
-对中心化后的样本点集$\bm{X}=\{\bm{x}_1,\bm{x}_2,\ldots,\bm{x}_i,\ldots,\bm{x}_m\}$（有$\sum_{i=1}^{m}\bm{x}_i = 0$），考虑将其最大可分地投影到新坐标系\ $\bm{W}= \{\bm{w}_1,\bm{w}_2,\ldots,\bm{w}_i,\ldots,\bm{w}_d\} $，其中$\bm{w}_i$是标准正交基向量，满足$\|\bm{w}_i\|_2 = 1$， $\bm{w}_i^T\bm{w}_j = 0$（$i \not= j$）。假设我们需要$d^\prime$（$d^\prime < d$）个主成分，那么样本点$\bm{x}_i$在低维坐标系中的投影是$\bm{z}_i = (z_{i1};z_{i2};\ldots;z_{id^\prime})$，其中$z_{ij} = \bm{w}_j^\mathrm{T}\bm{x}_i$，是$\bm{x}_i$在低维坐标系下第$j$维的坐标。
-对整个样本集，投影后样本点的方差是
-\begin{equation}
-\begin{aligned}
-    & \frac{1}{m}\sum_{i=1}^m \bm{z}_i^\mathrm{T}\bm{z}_i \\
-= & \frac{1}{m}\sum_{i=1}^m (\bm{x}_i^\mathrm{T}\bm{W})^\mathrm{T}(\bm{x}_i^\mathrm{T}\bm{W}) \\
-= & \frac{1}{m}\sum_{i=1}^m \bm{W}^\mathrm{T}\bm{x}_i\bm{x}_i^\mathrm{T}\bm{W} \\
-= & \frac{1}{m} \bm{W}^\mathrm{T}\bm{X}\bm{X}^\mathrm{T}\bm{W} \\
-\end{aligned}
-\end{equation}
+本毕业设计中，网络爬虫的部分使用 Python 语言进行编写，这也是目前主流的网络爬虫编写方式。本设计中的爬虫主要使用的 Python 库有 urllib（url 处理模块，Python 标准库之一，用来处理 url 请求）\cite{urllib}以及 lxml（Python 平台的 XML 和 HTML 工具包，用来进行 XML 或 HTML 解析，提取需要的内容）\cite{lxml}. 
 
-由于我们知道新坐标系$\bm{W}$的列向量是标准正交基向量，且样本点集$\bm{X}$已经过中心化，则PCA的优化目标可以写为
-\begin{equation}
-\label{PCA_goal_TMP}
-\begin{aligned}
-& \max_{\substack{\bm{W}}}  &  tr(\bm{W}^\mathrm{T}\bm{X}\bm{X}^ \mathrm{T}\bm{W}) \\
-& \operatorname{ s.t. }  &  \bm{W}^\mathrm{T}\bm{W} = \bm{I} \\
-\end{aligned}
-\end{equation}
+\section{Django 后端}
+Django 是一个免费、开源的高级 Python Web 框架，具有比较完善的功能，并且有着较高的安全性，通常来说是使用 Python 语言进行 Web 开发的一个主要的选择。Django 采用了 MVT 的软件设计模式：视图、模型和模板。\cite{django}\cite{django_runoob}Django 的模型系统相对于传统的直接操作数据库的方式功能性更强，并且能同步注册到后台管理界面，在本毕业设计中发挥了显著的作用。
 
-由于$\bm{X}\bm{X}^ \mathrm{ T }$是协方差矩阵，那么只需对它做特征值分解，即
-\begin{equation}
-\label{PCA_eigenvalue}
-\bm{X}^ \mathrm{ T }\bm{X} = \bm{W}\bm{\Lambda}\bm{W}^ \mathrm{ T } \\
-\end{equation}
-其中$\bm{\Lambda}=diag(\bm{\lambda})$，$\bm{\lambda} = \{\lambda_1,\lambda_2,\ldots,\lambda_m\}$。
+本毕业设计中采用 Django 3.2 版本进行后端开发，其中负责的程序包括用户认证系统、数据模型的管理以及 API（应用程序接口，application programming interface）的开放，并且管理员端的界面采用的也是Django的原生后台管理系统。
 
-具体地，考虑到它是半正定矩阵的二次型，存在最大值，可对\eqref{PCA_goal_TMP}使用拉格朗日乘数法
-\begin{equation}
-\bm{X}\bm{X}^ \mathrm{ T }\bm{w}_i  = \lambda_i \bm{w}_i \\
-\end{equation}
+\section{Vue 前端}
+本毕业设计中，前端部分使用 HTML, CSS, JavaScript 语言，配合 Vue 框架完成页面显示的实现。
 
-之后将求得的特征值降序排列，取前$d^\prime$个特征值对应的特征向量组成所需的投影矩阵$\bm{W}^\prime =(\bm{w}_1,\bm{w}_2,\ldots,\bm{w}_{d^\prime})$，即可得到PCA的解。PCA算法的描述如算法\ref{PCA_algorithm}所示。
-
-\begin{algorithm} 
-	\begin{spacing}{1.3}
-		\floatname{algorithm}{算法}
-		\caption{主成分分析（PCA）} 
-		\label{PCA_algorithm}
-		\renewcommand{\algorithmicrequire}{\textbf{输入：}}
-		\renewcommand{\algorithmicensure}{\textbf{输出：}} 
-		\begin{algorithmic}[1] 
-			\Require 样本集$\bm{x}=\{\bm{x}_1,\bm{x}_2,\ldots,\bm{x}_i,\ldots,\bm{x}_m\}$，低维空间维数$d^\prime$ 
-			\Ensure 投影矩阵  $\bm{W}^\prime =(\bm{w}_1,\bm{w}_2,\ldots,\bm{w}_{d^\prime})$
-			\State 对所有样本中心化$\bm{x}_i \gets \bm{x}_i - \frac{1}{m}\sum_{i=1}^m \bm{x}_i$
-			\State  计算样本的协方差$\bm{X}\bm{X}^ \mathrm{T}$
-			\State 对协方差矩阵$\bm{X}\bm{X}^ \mathrm{T}$做特征值分解
-			\State 取最大的$d^\prime$个特征值所对应的特征向量$\bm{w}_1,\bm{w}_2,\ldots,\bm{w}_{d^\prime}$
-		\end{algorithmic}  
-	\end{spacing}
-\end{algorithm}
-
-\subsubsection{主成分分析可信度评估方法}
-记待判定微博$\bm{w}_0$的经典特征向量为$\bm{f}^{c}_{0}$，它的发布者在$\bm{w_0}$前发布的$k$条微博为$\bm{W} = \bm{w}_1,\bm{w}_2,\ldots,\bm{w}_k$，这$k$条微博对应的经典特征向量集为$\bm{F}^{c}_{W} = \{ \bm{f}^{c}_{1},\bm{f}^{c}_{2},\ldots,\bm{f}^{c}_{k} \}$。令$label = 1$代表谣言，$label = 0$代表非谣言。算法的具体流程如算法\ref{PCA_model}所示。
-
-\begin{algorithm}
-	\begin{spacing}{1.3}
-		\floatname{algorithm}{算法}
-		\caption{基于PCA的信息可信度评估} 
-		\label{PCA_model}
-		\renewcommand{\algorithmicrequire}{\textbf{输入：}}
-		\renewcommand{\algorithmicensure}{\textbf{输出：}} 
-			\begin{algorithmic}[1] 
-				\Require $\bm{f}^{c}_{0}$，$\bm{F}^{c}_{W}$，保留主成分数$n$
-				\Ensure 标签$label\in \{0,1\}$
-				\State 对所有特征向量应用PCA，保留前$n$个主成分$\bm{o}^{c}_{i} \gets PCA(\bm{f}^{c}_{i}, n)$（$i = 0,1,\ldots,k$）
-				\State 计算$\bm{F}^{c}_{W}$中各向量的平均距离$\mu$和标准差$\sigma$
-				\State 计算阈值$thr = {\mu} / {\sigma}$
-				\If {$\min_{1<j\le k} \|\bm{o}^{c}_{0} - \bm{o}^{c}_{j} \|_2 > thr$}
-					\State $ label \gets 1 $
-				\Else
-					\State $ label \gets 0 $
-				\EndIf
-			\end{algorithmic}
-	\end{spacing}
-\end{algorithm}
-
-\section{代码表示}
-
-%据悉以下语言被lstlisting支持：Awk, bash, Basi4, C#, C++, C, Delphi, erlang, Fortran, GCL, Haskell, HTML, Java, JVMIS, Lisp, Logo, Lua, make, Mathematica, Matlab, Objective C , Octave, Pascal, Perl, PHP, Prolog,  Python, R, Ruby, SAS, Scilab, sh, SHELXL, Simula, SQL, tcl, TeX, VBScript, Verilog, VHDL, XML, XSLT
-%遗憾的是，JavaScript不被支持，请上网搜索支持该语言的方法
-
-\subsection{直接书写代码在.tex中}
-下面的代码\ref{plus}是用Python编写的加法函数。
-
-\begin{lstlisting}[language=Python, caption=加法, label=plus, tabsize=2]  
-def plusFunc(a, b):
-	return a + b 
-\end{lstlisting}  
-
-\subsection{引用代码文件}
-下面的代码\ref{recursion}是用Python文件中引入的倒序打印$x$到$1$的函数，请查看code文件夹。
-
-\lstinputlisting[language=Python, caption=倒序打印数字, label=recursion, tabsize=2]{code/recursion.py}
-
-\section{列表样式}
-
-\subsection{使用圆点作为项目符号}
+\subsection{Web 前端开发编程语言}
+Web 前端开发的核心构成通常为以下三种开发语言：HTML, CSS, JavaScript. 它们在生成网页的过程中分别产生不同的作用。
 
 \begin{itemize}
-\item \textbf{第一章为基础模块示例}，是的，本章的名字就是基础模块示例，正如你看到这个样子。
-\item \textbf{第二章为不存在}，是的，其实它不存在。
+\item \textbf{超文本标记语言}（Hypertext Markup Language，简称：HTML）是一种用来结构化 Web 网页及其内容的标记语言，相当于建筑的框架。在 Web 网页的构成中，它是最为基本且无法缺少的部分。\cite{html_mdn}
+
+\item \textbf{层叠样式表}（Cascading Style Sheet，简称：CSS）是为网页添加样式的代码，相当于建筑的装修粉饰。样式表可以为网页增加适当的排列、色彩等样式，实现美观性。\cite{css_mdn}
+
+\item \textbf{JavaScript} 是一门编程语言，可为网站添加各种交互功能。标准化的 JavaScript 被称为 ECMAScript（简称：ES），随着时代的更替，ES 的代码规范和语言性能也得到了修订和改进。\cite{javascript_mdn}实际使用时，大型项目很少完全使用原生 JavaScript 进行编程，很多时候会配合 React, Vue, Angular 等框架来实现更强大的功能和规范化。
 \end{itemize}
 
-\subsection{使用数字作为项目符号}
+\subsection{Vue 框架}
+Vue.js 是一款用于构建用户界面的渐进式 JavaScript 框架，是目前非常主流的 JavaScript 框架之一。Vue 框架的设计理念是自底向上的。它的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。对于复杂的单页应用，使用 Vue 框架是非常有优势的。\cite{vuejs}
 
-\begin{enumerate}
-\item \textbf{第一章为基础模块示例}，是的，本章的名字就是基础模块示例，正如你看到这个样子。
-\item \textbf{第二章为不存在}，是的，其实它不存在。
-\end{enumerate}
+目前广泛使用的 Vue 框架有 Vue 2 和 Vue 3 两种版本，本毕业设计采用的是更新版的 Vue 3. 新的版本解决了旧版本的一些问题，还能使工程更加体系化。
 
-\subsection{句中数字编号列表样式}
+\subsection{Vite}
+Vite 是构建 Vue 3 工程的一款开箱即用的脚手架。它能够快速地构建一套 Vue 生产环境，能够安装一些插件，并且有一个支持热更新（即更新代码后实时将更新反馈到页面）的开发服务器。\cite{Vite}
 
-\begin{enumerate*}
-    \item \textbf{第一章为基础模块示例}，是的，本章的名字就是基础模块示例，正如你看到这个样子；
-    \item \textbf{第二章为不存在}，是的，其实它不存在。
-\end{enumerate*}
+本毕业设计采用 Vite 构建 Vue 3 框架的前端工程，并使用配套的开发服务器进行一系列的系统功能测试。
 
-\chapter{为了目录撑到第二页}
-\section{我不得不再添加一点内容}
-\section{尽管这些章节一点正文都没有}
-\section{是的}
-\section{真的没有}
-\section{我已经不知道说什么了}
-\section{如果有，我们就祝愿一下学校教务处什么时候转变一下思维}
-\section{把控制格式这种事情往前做}
-\section{不要总是觉得折磨学生是合理的}
-\section{你拿着教学管理岗位的工资}
-\section{你需要折磨一下你自己才对}
-\section{不要觉得我对别人要求太高，对自己太低}
-\section{我对自己要求低的话也不至于想要修订这份模板}
+\section{Web 前后端分离}
+Web 前后端分离式开发是近年来 Web 开发的热门模式，通过将前后端的开发流程进行解耦，达到一个双管齐下、互不干扰的效果，能够提高工程师的工作效率和代码的可维护性。下文将会介绍 Web 前后端分离式开发的一些流程以及使用的工具。
+
+\subsection{前后端分离式开发流程}
+前后端分离的工作流程主要如下：前后端工程师确定产品功能，以及接口和传递的数据类型；前端工程师以空数据或虚拟数据的状态开发前端界面，同时后端工程师设计后台计算逻辑并暴露接口；这些开发完成后，前端工程师就可以通过 Ajax 等方式访问接口调取数据，从而实现一个完整的程序。
+
+\subsection{Vue Router}
+传统的 Web 开发模式下，浏览器访问的页面往往是服务器直接返回的整个 HTML 文件，而前后端分离式开发则把页面跳转的工作交给前端实现，也就是现在所说的前端路由。这种模式下，对网页 HTML 结构以及静态资源的请求是不会受后端服务器状态的影响的。
+
+Vue Router 是 Vue.js 的官方路由。在使用 Vue 框架开发单页应用时，一般使用它来负责前端路由，它会接管浏览器的操作（如刷新、后退）来使得前端路由的体验接近用户的预期。\cite{vue_router}本毕业设计中使用 Vite 的插件管理模块安装 Vue Router 并实现前端路由。
+
+\subsection{Axios}
+Axios 是一个基于 promise（JavaScript 中一种常用的异步方式）的 HTTP 请求工具。\cite{axios}它是一种 Vue 框架开发者主流的调取 API 的方式。本毕业设计中也使用 Vite 的插件管理模块安装 Axios 以实现前后端 API 通信。
+
+\section{MySQL}
+MySQL 是 Oracle 公司开发的一款基于 SQL 语言的关系型数据库。它是比较传统的一款关系型数据库，具有扎实的功能和稳定性。\cite{mysql}本毕业设计使用开源版的 MySQL 作为数据库，它与 Django 有着良好的兼容性。在数据处理的过程中也常使用 pymysql 库在 Python 脚本中对 MySQL 数据库进行读写操作。
+
+\section{Nginx}
+Nginx 是一个异步框架的网页服务器，通常也可以用作反向代理、负载平衡器和 HTTP 缓存。\cite{nginx}本毕业设计中使用 Nginx 将前后端的开发服务器代理到同一域名下，解决同源策略问题，实现一个整体的测试运行服务器。
+
+
+\chapter{系统可行性分析}
+在软件开发之前，对其进行可行性分析，分析其技术、经济、环境等方面的实践可行性，能够保证工程的实现是切合实际且具有以人为本的精神的。除此之外，对各方面的社会效益有一定的思考，能使得开发者在开发过程中更具备社会责任感。本章将从四个方面进行系统的可行性分析。
+
+\section{技术可行性分析}
+系统使用的是前后端分离的开发方式，使用的语言有 Python, HTML, CSS, JavaScript, 并使用 Vue 和 Django 框架，数据库使用 MySQL. 以上所运用的技术都是当前比较成熟的，安全性和可靠性都有着保障。并且这些技术运用得十分广泛，因此可以容易地得到系统的学习资料和问题参考。
+
+\section{经济可行性分析}
+高考一直是大部分中国学生的关键人生节点，在其无与伦比的重要性下，高考以及志愿填报的辅导具有着经久不衰的经济效益。这种类型的程序并不缺乏用户，维护强度不高，且使用率呈现一定的周期性，只要合理规划服务器的负载利用率，经济效益应当是合适的。
+
+\section{操作可行性分析}
+本程序是一款 Web 平台应用，在任何能运行网页浏览器的设备上均可运行，功能和页面交互也比较简单直观，对于能正常使用浏览器浏览网页的人几乎不需要学习成本。
+
+\section{社会效益可行性分析}
+本毕业设计的选题意在帮助广大的高中学生及家长更好地完成高考志愿的选择。对于经济实力以及搜集信息能力较弱的家庭，这样的系统可能会有很大的帮助，因此本毕业设计会基于这样的普惠性的想法来完成。
+
+
+\chapter{系统构思设计}
+在启动正式的开发进程之前，一个精密的整体构思是不可或缺的。有了良好的构思，可以预见并提前避免做一些无用功，并使开发者对任务的完成进度有更好的掌握。本章将分别介绍功能模块、应用内部模块以及数据库的设计。
+
+\section{功能模块设计}
+客户端功能模块整体的思路设计图见图\ref{function_modules}, 包括了填报指导、高校信息、新闻政策、用户系统四个模块。此外，管理后台将作为一个单独的模块进行介绍。
+\buptfigure[width=1\textwidth]{pictures/客户端功能模块设计图}{客户端功能模块设计图}{function_modules}
+
+\subsection{填报指导模块设计}
+填报指导模块又分为以下几个子模块：院校资料库、录取可能性分析、模拟志愿填报、一分一段表。
+\subsubsection{院校资料库}
+本模块主要是为用户提供浏览数据库各类大学资料的功能。院校资料库模块在本系统中具有一定的重要性，学生和家长可以根据自己的个性化需求去查询得到指定的院校信息，
+\begin{itemize}
+\item \textbf{院校列表：}通过院校名片的形式展示院校的名称、所在城市以及一些其他情况（办学性质、荣誉等）。并且用户可以通过所在省份、开设专业、办学性质、荣誉等方面进行筛选查看，也可以直接对院校名称进行搜索。
+\item \textbf{院校详情：}点击院校名片会进入单独的页面，该页面展示了院校的名称、所在城市、简介、开设专业及往年录取分数等信息。其中，可以浏览不同报考地区的录取分数，但系统会自动读取用户的报考地区并优先显示。
+\end{itemize}
+
+\subsubsection{录取可能性分析}
+本模块将会根据用户的个人资料中的成绩情况和期望报考的学校进行分析，然后显示用户录取的可能性。具体事件流程如图\ref{application_analyse}, 用户选择自己想要查询的学校后点击查询按钮，系统会在后台进行对该学校录取分数线或名次的预测，再读取用户资料中的成绩信息，将两者进行一个分析比对，并展示分析结果。
+\buptfigure[width=1\textwidth]{pictures/录取可能性分析}{录取可能性分析流程图}{application_analyse}
+
+\subsubsection{模拟志愿填报}
+本模块的功能是为用户提供一个模拟填报的系统，让用户预先体验志愿填报的流程，并且根据不同的志愿顺序，结合用户的个人成绩进行院校的推荐。在选择院校填报的过程中，用户除了可以选择系统推荐的院校，也可以直接搜索自己选定的院校来进行填报。用户使用事件流程如图\ref{application_simulation}所示。
+\buptfigure[width=1\textwidth]{pictures/模拟志愿填报}{模拟志愿填报流程图}{application_simulation}
+
+\subsubsection{一分一段表}
+本模块的功能是提供官方的一分一段表文件以供用户进行查阅比对。因为官方的一分一段表参考标准比较复杂，计划采用文章的形式直接呈现原始内容，而用户可以使用搜索的方式找到自己需要的内容。
+
+\subsection{高校信息模块设计}
+本模块的主要内容是展示国内各大高校的荣誉、评价等信息，以便学生和家长在选择院校方面进行一定的参考。为保证信息的客观性，本模块全部使用文章的形式呈现，展示原始的信息内容。
+
+\begin{itemize}
+\item \textbf{双一流评级：}收录至今为止的双一流评级信息，包括一流大学的评选以及一流学科建设院校列表。
+\item \textbf{全国第四轮学科评估：}收录全国第四轮学科评估中各个学科的大学评级信息。
+\item \textbf{高校综合排名：}收录各大有影响力的机构对于国内高校的综合排名情况。
+\item \textbf{高校专业排名：}收录各大有影响力的机构对于国内高校的各专业排名情况。
+\end{itemize}
+
+\subsection{新闻政策模块设计}
+本模块的主要内容是展示最新的有关高考、高考招生以及志愿填报的新闻政策，以便学生和家长及时接收到最新的资讯。为保证信息的客观性，本模块也全部使用文章的形式呈现，展示原始的信息内容。
+
+\begin{itemize}
+\item \textbf{高考最新政策：}收录官方渠道发布的各地区高考最新政策资讯。
+\item \textbf{志愿填报最新政策：}收录官方渠道发布的各地区高考志愿填报最新政策资讯。
+\item \textbf{院校招生最新政策：}收录各院校发布的该校招生最新政策资讯。
+\end{itemize}
+
+\subsection{用户管理模块设计}
+本模块负责对学生或家长的用户账户进行管理，提供注册、登录、修改资料和密码的功能。用户管理模块也是本系统比较重要的功能，许多其他模块都依赖用户资料来个性化地提供服务或进行数据分析。
+
+\subsubsection{用户注册}
+用户注册模块要求用户输入用户名和密码以进行注册，并有一定的格式及安全性检测。在注册时要求用户输入高考相关资料（报考地区、成绩等），以便于在其他功能中长期的使用。用户注册的事件流程见图\ref{sign_up}所示。在输入账户名和密码后进行一次前端合法性检验，不通过时会提示原因，通过后方可进入下一阶段输入高考信息。最后提交注册时先进行前端检验，再进行后端检验，不通过的时候提示原因，通过后提示注册成功，并转到个人资料页面以示意用户填写更多可选资料。其中，填写高考信息的阶段可随时回退到上一阶段。
+\buptfigure[width=1\textwidth]{pictures/用户注册}{用户注册流程图}{sign_up}
+
+\subsubsection{用户登录}
+用户登录模块提供使用用户名和密码进行登录的功能，以便程序获取用户的信息来实现一些应用的功能。用户登录的事件流程见图\ref{sign_in}所示。用户输入用户名和密码，点击按钮发送登录请求后，系统后台判断登录是否成功，如不成功则提示用户重新输入登录信息，如成功则跳转至用户浏览器历史记录的上一个页面，以方便用户继续使用系统。
+\buptfigure[width=1\textwidth]{pictures/用户登录}{用户登录流程图}{sign_in}
+
+\subsubsection{更改资料}
+更改资料模块为用户提供查看目前的个人资料以及更改资料的功能。进入页面后系统从后台读取目前的个人资料信息并展示，用户可以更改个人资料。更改完毕后用户可以提交更改，系统进行检验后返回资料更改是否成功的结果。用户也可以随时点击“取消更改”的按钮来放弃更改的内容，重新查看原本的资料。
+
+\subsubsection{安全管理}
+安全管理模块设定的基本功能是更改密码。用户需要输入旧密码，并两次输入新密码来更改密码。如果旧密码正确，且两次输入的新密码一致，即可成功更改密码，否则更改失败，系统向用户提示错误原因。
+
+\subsection{管理后台模块设计}
+管理后台模块主要的功能是为系统管理员提供一个管理用户以及其他数据库资料的可视化平台。在本系统中，主要需要管理的资源包括专业列表、院校信息、院校历年录取分数线信息，以及各类文章。管理员能够在管理后台中简单地实现增加、编辑和删除这些资源的操作。
+
+\section{应用内部模块设计}
+上一节中介绍了应用使用时的功能模块设计，本节则将介绍应用内部如何进行模块的划分以及每个模块所承担的功能。应用内部模块基本的内容及关系见图\ref{inner_modules}.
+\buptfigure[width=0.7\textwidth]{pictures/应用内部模块设计图}{应用内部模块设计图}{inner_modules}
+
+\subsection{核心模块}
+主要负责“录取可能性分析”和“模拟志愿填报”功能，这两个功能是系统的核心技术成分。其中该模块的后端部分包括用到的一些分析和推荐算法，以及基础的返回 API. 前端部分则负责这两个部分的页面的实现。
+
+\subsection{用户模块}
+该模块的后端部分包括用户资料模型、用户认证系统（注册、登录、修改密码等 API）、以及一些用户资料读取和更改的 API. 前端部分则负责上文中用户管理模块所有功能的页面实现。
+
+\subsection{院校模块}
+该模块的后端部分包括院校、专业和录取分数线的模型，以及读取上述模型的各种信息的 API, 核心模块也会用到该模块的模型或方法。前端部分则负责院校列表以及院校详情的页面实现。
+
+\subsection{文章模块}
+该模块负责所有需要使用文章形式展现的部分。后端部分包括文章模型以及读取文章详细内容的 API. 前端部分则是文章列表以及文章详细内容的页面实现。
+
+\section{数据库设计}
+上一节中提到了应用内部模块的一些模型，本系统的数据管理主要是依托 Django 的模型系统配合 MySQL
+
+\chapter{系统实现与测试}
+
+\section{开发与运行环境}
+\subsection{开发环境}
+\subsection{运行及测试环境}
+
+\section{数据的获取}
+\section{各功能模块的实现}
+\section{系统测试}
+
+
+\chapter{总结}
+
+\section{毕业设计总结}
+\section{未来展望}
 %%%%%%%%%%%%%%%%%%%%%%% Main Area ENDs Here %%%%%%%%%%%%%%%%%%%%%%%%
 %\let\cleardoublepage=\cleardoublepagebak
 
@@ -336,65 +283,13 @@ def plusFunc(a, b):
 \addcontentsline{toc}{section}{附录1\quad{}缩略语表}
 \section*{附录1\quad{}缩略语表}
 
-\begin{bupttable}{基于浏览者行为的特征}{crowdwisdom2}
-    \begin{tabular}{l|l|l}
-        \hline \textbf{特征} & \textbf{描述} & \textbf{形式与理论范围}\\
-        \hline 点赞量 & 微博的点赞数量 & 数值，$\mathbb{N}$ \\
-        \hline 评论量 & 微博的评论数量 & 数值，$\mathbb{N}$ \\
-        \hline 转发量 & 微博的转发数量 & 数值，$\mathbb{N}$ \\
-        \hline
-    \end{tabular}
-\end{bupttable}
 
-\begin{bupttable}{基于浏览者行为的复杂特征}{complexcrowdwisdom2}
-    \begin{tabular}{l|l|l|l}
-		\hline
-        \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{类别}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{特征}}} & \multicolumn{2}{c}{\textbf{不知道叫什么的表头}} \\
-        \cline{3-4}
-         & & \multicolumn{1}{c|}{\textbf{描述}} & \multicolumn{1}{c}{\textbf{形式与理论范围}} \\
-		\hline
-        \multirow{3}{*}{正常互动} & 点赞量 & 微博的点赞数量 & 数值，$\mathbb{N}$ \\
-		\cline{2-4}
-         & 评论量 & 微博的评论数量 & 数值，$\mathbb{N}$ \\
-		\cline{2-4}
-         & 转发量 & 微博的转发数量 & 数值，$\mathbb{N}$ \\
-		\hline
-        非正常互动 & 羡慕量 & 微博的羡慕数量 & 数值，$\mathbb{N}$ \\
-        \hline
-    \end{tabular}
-\end{bupttable}
-\buptfigure[width=0.15\textheight]{pictures/autoencoder}{自编码器结构}{autoencoder}
-
-\begin{lstlisting}[language=Python, caption=减法, label=minus, tabsize=2]  
-def minusFunc(a, b):
-	return a - b 
-\end{lstlisting}  
-
-\begin{equation}
-\label{PCA_goal}
-\begin{aligned}
-\max_{\substack{\bm{W}}}  &  tr(\bm{W}^\mathrm{T}\bm{X}\bm{X}^ \mathrm{T}\bm{W})
-\end{aligned}
-\end{equation}
 
 \clearpage
 \phantomsection
 \addcontentsline{toc}{section}{附录2\quad{}数学符号}
 \section*{附录2\quad{}数学符号}
-\begin{center}
-	\begin{tabular}{ccc}
-		\multicolumn{2}{c}{\textbf{数和数组}} \\
-		\\
-		$a$ & 标量（整数或实数）\\
-		$\bm{a}$ & 向量\\
-		$dim()$ & 向量的维数\\
-		$\bm{A}$ & 矩阵\\
-		$\bm{A}^\mathrm{T}$ & 矩阵$\textbf{A}$的转置\\
-		$\bm{I}$ & 单位矩阵（维度依据上下文而定） \\
- 		$diag(\bm{a})$ & 对角方阵，其中对角元素由向量$\bm{a}$确定 \\
 
-	\end{tabular}
-\end{center}
 
 
 \end{nopagenumber}
